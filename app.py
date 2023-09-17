@@ -18,7 +18,8 @@ app.layout = dmc.MantineProvider([
 ],
     theme={"colorScheme": "dark"},
     withGlobalStyles=True,
-    id="provider-temy")
+    id="provider-temy"
+)
 
 
 @callback(
@@ -28,9 +29,9 @@ app.layout = dmc.MantineProvider([
     prevent_initial_call=True
 )
 def zmen_temu(n_clicks, tema):
-    if tema["ColorScheme": "dark"]:
+    if tema["colorScheme"] == "dark":
         return {"colorScheme": "light"}
-    if tema["ColorScheme": "light"]:
+    else:
         return {"colorScheme": "dark"}
 
 
